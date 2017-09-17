@@ -1,0 +1,47 @@
+<h1> Welcome to {{ getCourseName()}}</h1>
+
+<button (click)="buttonClicked($event)">Terminate</button>
+
+<!--<img src="{{imageUrl}}" alt="">
+<img [src]="imageUrl" alt="">-->
+
+
+<pre>{{imageUrl}}</pre> Student Name:
+
+<input type="text" name="studentName" id="studentName" [(ngModel)]='studentName'> {{studentName}}
+
+<ng-container *ngIf="isActive; else otherTemplate">
+    <div>Employee is With Organisation</div>
+</ng-container>
+<ng-template #otherTemplate>
+    <div>Employee is Out of Organisation</div>
+</ng-template>
+<div [hidden]='!isActive'>Employee is With Organisation</div>
+<!--<ng-container *ngIf="expression; then thenTemplate; else elseTemplate"></ng-container>
+<ng-template #thenTemplate>
+    
+</ng-template>
+<ng-template #elseTemplate>
+    
+</ng-template>
+
+
+
+<input type="text" name="" id="" #empName> {{empName.value}}-->
+
+<ul>
+    <li *ngFor="let item of hobbies; let i=index">{{i}} - {{item}}</li>
+</ul>
+
+
+
+
+
+
+<input [attr.datausername]="twdb" type="text">
+
+<div [style.color]='color'>Red Div</div>
+
+<div [ngStyle]="{'color': 'blue'}">Blue Div</div>
+
+<div [ngClass]="'style1'">ng Class Demo</div>
